@@ -1,8 +1,31 @@
-//
-// Created by TimSalguz on 13.11.2021.
-//
+#pragma once
 
-#ifndef ABSTRACTANDINCAPSULATION_CLASSES_HPP
-#define ABSTRACTANDINCAPSULATION_CLASSES_HPP
+namespace ts
+{
+    struct Point
+    {
+        double x;
+        double y;
+    };
 
-#endif //ABSTRACTANDINCAPSULATION_CLASSES_HPP
+    class Rectangle
+    {
+    public:
+        //Создаю конструктор, передаю в него параметры, обе точки
+        Rectangle::Rectangle(Point A, Point B);
+
+        //Создаю деструктор
+        ~Rectangle() {/*std::cout << "Destructor's end" << std::endl;*/}
+
+        //Создаю функцию в классе:
+        double Perimeter();
+
+        double Square();
+
+    private:
+        //Ultrasecret calculations!
+
+        Point m_P1;
+        Point m_P2;
+    };
+}
